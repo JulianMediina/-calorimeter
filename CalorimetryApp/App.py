@@ -35,7 +35,7 @@ def calcular_calor_especifico():
         T0c = float(entry_T0c.get())
         Teh20c = float(entry_Teh20c.get())
 
-        c = ((Mc + k) * (Teh20c - T0c)) / (msc * (Tc - Teh20c))
+        c = ((Mc + calcular_k()) * (Teh20c - T0c)) / (msc * (Tc - Teh20c))
         c = c * 4186.8
 
         datos_materiales = cargar_datos_materiales('datos_materiales.json')
@@ -117,7 +117,7 @@ btn_agregar_mh20k.grid(row=4, column=3, columnspan=1, padx=10, pady=10)
 
 # Botón para calcular k
 btn_calcular_k = tk.Button(root, text="Calcular k", command=calcular_k)
-btn_calcular_k.grid(row=6, column=0, columnspan=2, padx=10, pady=10)
+btn_calcular_k.grid(row=6, column=1, columnspan=2, padx=10, pady=10)
 
 
 #separator
