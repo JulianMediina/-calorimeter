@@ -58,9 +58,24 @@ def calcular_calor_especifico():
     except ValueError:
         messagebox.showerror("Error", "Por favor, ingrese valores numéricos válidos.")
 def agregar(case):
-    void
-    
-    
+    if case == 1:
+        entry_mh20k.configure(state='disabled')
+    elif case == 2:
+        entry_mTh20k.configure(state='disabled')
+    elif case == 3:
+        entry_MT0h20k.configure(state='disabled')
+    elif case == 4:
+        entry_Teh20K.configure(state='disabled')
+    elif case == 5:
+        entry_msc.configure(state='disabled')
+    elif case == 6:
+        entry_Mc.configure(state='disabled')
+    elif case == 7:
+        entry_Tc.configure(state='disabled')
+    elif case == 8:
+        entry_T0c.configure(state='disabled')
+    elif case == 9:
+        entry_Teh20c.configure(state='disabled')
     
 # Crear la ventana principal
 root = tk.Tk()
@@ -91,7 +106,7 @@ tk.Label(root, text="mh20k (masa del agua hirviendo):").grid(row=1, column=0, pa
 entry_mh20k = tk.Scale(root, from_=0, to=100, orient=tk.HORIZONTAL, length=300,sliderlength=20, tickinterval=20, 
                        bg="lightblue", highlightthickness=0,troughcolor="white")
 entry_mh20k.grid(row=1, column=2, padx=20, pady=20)
-btn_agregar_mh20k= tk.Button (root, text="Agregar", command=agregar(1))
+btn_agregar_mh20k= tk.Button (root, text="Agregar", command=lambda c=1: agregar(c))
 btn_agregar_mh20k.grid(row=1, column=3, columnspan=1, padx=10, pady=10)
 
 
@@ -99,21 +114,21 @@ tk.Label(root, text="mTh20k (masa de agua hirviendo + calorímetro):").grid(row=
 entry_mTh20k = tk.Scale(root, from_=0, to=100, orient=tk.HORIZONTAL, length=300,sliderlength=20,  tickinterval=20, 
                        bg="lightblue", highlightthickness=0,troughcolor="white")
 entry_mTh20k.grid(row=2, column=2, padx=10, pady=10)
-btn_agregar_mh20k= tk.Button(root, text="Agregar", command=agregar(1))
+btn_agregar_mh20k= tk.Button(root, text="Agregar", command=lambda c=2: agregar(c))
 btn_agregar_mh20k.grid(row=2, column=3, columnspan=1, padx=10, pady=10)
 
 tk.Label(root, text="MT0h20k (masa del agua fría):").grid(row=3, column=0, padx=10, pady=10, sticky=tk.E)
 entry_MT0h20k = tk.Scale(root, from_=0, to=100, orient=tk.HORIZONTAL, length=300,sliderlength=20,  tickinterval=20, 
                        bg="lightblue", highlightthickness=0,troughcolor="white")
 entry_MT0h20k.grid(row=3, column=2, padx=10, pady=10)
-btn_agregar_mh20k= tk.Button(root, text="Agregar", command=agregar(1))
+btn_agregar_mh20k= tk.Button(root, text="Agregar", command=lambda c=3: agregar(c))
 btn_agregar_mh20k.grid(row=3, column=3, columnspan=1, padx=10, pady=10)
 
 tk.Label(root, text="Teh20K (temperatura de equilibrio del agua):").grid(row=4, column=0, padx=10, pady=10, sticky=tk.E)
 entry_Teh20K = tk.Scale(root, from_=0, to=100, orient=tk.HORIZONTAL, length=300,sliderlength=20, tickinterval=20, 
                        bg="lightblue", highlightthickness=0,troughcolor="white")
 entry_Teh20K.grid(row=4, column=2, padx=10, pady=10)
-btn_agregar_mh20k= tk.Button(root, text="Agregar", command=agregar(1))
+btn_agregar_mh20k= tk.Button(root, text="Agregar", command=lambda c=4: agregar(c))
 btn_agregar_mh20k.grid(row=4, column=3, columnspan=1, padx=10, pady=10)
 
 # Botón para calcular k
@@ -131,7 +146,7 @@ tk.Label(root, text="msc (masa del sólido):").grid(row=1, column=5, padx=10, pa
 entry_msc = tk.Scale(root, from_=0, to=100, orient=tk.HORIZONTAL, length=300,sliderlength=20,  tickinterval=20, 
                        bg="lightblue", highlightthickness=0,troughcolor="white")
 entry_msc.grid(row=1, column=6, padx=10, pady=10)
-btn_agregar_mh20k= tk.Button(root, text="Agregar", command=agregar(1))
+btn_agregar_mh20k= tk.Button(root, text="Agregar",  command=lambda c=5: agregar(c))
 btn_agregar_mh20k.grid(row=1, column=7, columnspan=1, padx=10, pady=10)
 
 
@@ -139,28 +154,28 @@ tk.Label(root, text="Mc (masa del fluido - agua):").grid(row=2, column=5, padx=1
 entry_Mc = tk.Scale(root, from_=0, to=100, orient=tk.HORIZONTAL, length=300,sliderlength=20, tickinterval=20, 
                        bg="lightblue", highlightthickness=0,troughcolor="white")
 entry_Mc.grid(row=2, column=6, padx=10, pady=10)
-btn_agregar_mh20k= tk.Button(root, text="Agregar", command=agregar(1))
+btn_agregar_mh20k= tk.Button(root, text="Agregar", command=lambda c=6: agregar(c))
 btn_agregar_mh20k.grid(row=2, column=7, columnspan=1, padx=10, pady=10)
 
 tk.Label(root, text="Tc (temperatura del fluido hirviendo > 90°C):").grid(row=3, column=5, padx=10, pady=10, sticky=tk.E)
 entry_Tc = tk.Scale(root, from_=0, to=100, orient=tk.HORIZONTAL, length=300,sliderlength=20, tickinterval=20, 
                        bg="lightblue", highlightthickness=0,troughcolor="white")
 entry_Tc.grid(row=3, column=6, padx=10, pady=10)
-btn_agregar_mh20k= tk.Button(root, text="Agregar", command=agregar(1))
+btn_agregar_mh20k= tk.Button(root, text="Agregar", command=lambda c=7: agregar(c))
 btn_agregar_mh20k.grid(row=3, column=7, columnspan=1, padx=10, pady=10)
 
 tk.Label(root, text="T0c (temperatura inicial del fluido):").grid(row=4, column=5, padx=10, pady=10, sticky=tk.E)
 entry_T0c = tk.Scale(root, from_=0, to=100, orient=tk.HORIZONTAL, length=300,sliderlength=20, tickinterval=20, 
                        bg="lightblue", highlightthickness=0,troughcolor="white")
 entry_T0c.grid(row=4, column=6, padx=10, pady=10)
-btn_agregar_mh20k= tk.Button(root, text="Agregar", command=agregar(1))
+btn_agregar_mh20k= tk.Button(root, text="Agregar", command=lambda c=8: agregar(c))
 btn_agregar_mh20k.grid(row=4, column=7, columnspan=1, padx=10, pady=10)
 
 tk.Label(root, text="Teh20c (temperatura de equilibrio del fluido):").grid(row=5, column=5, padx=10, pady=10, sticky=tk.E)
 entry_Teh20c = tk.Scale(root, from_=0, to=100, orient=tk.HORIZONTAL, length=300,sliderlength=20, tickinterval=20, 
                        bg="lightblue", highlightthickness=0,troughcolor="white")
 entry_Teh20c.grid(row=5, column=6, padx=10, pady=10)
-btn_agregar_mh20k= tk.Button(root, text="Agregar", command=agregar(1))
+btn_agregar_mh20k= tk.Button(root, text="Agregar", command=lambda c=9: agregar(c))
 btn_agregar_mh20k.grid(row=5, column=7, columnspan=1, padx=10, pady=10)
 
 # Botón para calcular el calor específico del sólido (c)
