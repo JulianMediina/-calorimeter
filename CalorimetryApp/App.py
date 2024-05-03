@@ -8,7 +8,7 @@ from numpy import void
 
 # Función para cargar datos de materiales desde un archivo JSON
 def cargar_datos_materiales(ruta_archivo):
-    with open(ruta_archivo, 'r') as archivo:
+    with open(ruta_archivo, 'r', encoding='utf-8' ) as archivo:
         datos_materiales = json.load(archivo)
     return datos_materiales
 
@@ -21,8 +21,9 @@ def calcular_k():
         Teh20K = float(entry_Teh20K.get())
 
         k = (mh20k * (mTh20k - Teh20K)) / (Teh20K - MT0h20k)
-        
-        messagebox.showinfo("Resultado k", f"El valor de k es: {k:.2f}")
+        textLabel= "K= " + str(f"{k:.2f}")
+        tk.Label(root, text=textLabel, font=("Arial",20) ).grid(row=5, column=1, padx=10, pady=10, sticky=tk.E)
+        return k 
     except ValueError:
         messagebox.showerror("Error", "Por favor, ingrese valores numéricos válidos.")
 
@@ -83,7 +84,7 @@ photo2 = ImageTk.PhotoImage(image2)  # Convertir la imagen a PhotoImage
 
 # Crear un widget Label para mostrar la imagen
 label2 = tk.Label(root, image=photo2)
-label2.grid(row=0, column=0, padx=10, pady=10,columnspan=3)  
+label2.grid(row=0, column=0, padx=10, pady=10,columnspan=4)  
 
  # Etiquetas y campos de entrada para el cálculo de k
 tk.Label(root, text="mh20k (masa del agua hirviendo):").grid(row=1, column=0, padx=10, pady=10, sticky=tk.E)
@@ -116,6 +117,7 @@ btn_agregar_mh20k= tk.Button(root, text="Agregar", command=agregar(1))
 btn_agregar_mh20k.grid(row=4, column=3, columnspan=1, padx=10, pady=10)
 
 # Botón para calcular k
+
 btn_calcular_k = tk.Button(root, text="Calcular k", command=calcular_k)
 btn_calcular_k.grid(row=6, column=1, columnspan=2, padx=10, pady=10)
 

@@ -63,10 +63,7 @@
         "calor_especifico": 2100,
         "unidad": "J/(kg·K)"
     },
-    "Agua (líquida)": {
-        "calor_especifico": 4184,
-        "unidad": "J/(kg·K)"
-    },
+     
     "Hormigón": {
         "calor_especifico": 880,
         "unidad": "J/(kg·K)"
