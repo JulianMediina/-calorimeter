@@ -105,11 +105,11 @@ def mostrar_creditos():
     
     # Texto de los créditos
     texto_creditos = (
-        "Desarrollado por [Tu Nombre]\n"
-        "Fecha: [Fecha de Creación]\n"
-        "Versión: [Número de Versión]\n"
-        "Contacto: [Tu Correo Electrónico]\n"
-        "Sitio Web: [Tu Sitio Web]\n"
+        "Desarrollado por Brayan Julian Barrantes Medina\n"
+        "Fecha: 10-may-24 \n"
+        "Versión: V 1.0-\n"
+        "Contacto: Brayan.barrantes@uptc.edu.co\n"
+        "Sitio Web: http://www.sc.ehu.es/sbweb/fisica3/calor/calorimetro/calorimetro.html \n"
     )
     
     # Mostrar el texto de los créditos en un widget Label en la ventana de créditos
