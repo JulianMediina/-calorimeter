@@ -3,8 +3,80 @@ import tkinter as tk
 from tkinter import messagebox
 from PIL import Image, ImageTk
 import json
+from tkinter import messagebox
+import webbrowser
 
-from numpy import void
+def mostrar_creditos():
+    # Crear una ventana secundaria para mostrar los créditos
+    ventana_creditos = tk.Toplevel(root)
+    ventana_creditos.title("Créditos")
+    
+    # Cargar la imagen de los créditos desde un archivo
+    imagen_creditos = Image.open("LogoUPTC.png")
+    imagen_creditos = imagen_creditos.resize((800, 300))  # Ajustar el tamaño de la imagen si es necesario
+    foto_creditos = ImageTk.PhotoImage(imagen_creditos)
+    foto_creditos.padding = 100
+    
+    # Mostrar la imagen en un widget Label en la ventana de créditos
+    label_imagen = tk.Label(ventana_creditos, image=foto_creditos)
+    label_imagen.pack(pady=10)
+    
+    # Texto de los créditos
+    texto_creditos = (
+        "Desarrollado por [Tu Nombre]\n"
+        "Fecha: [Fecha de Creación]\n"
+        "Versión: [Número de Versión]\n"
+        "Contacto: [Tu Correo Electrónico]\n"
+        "Sitio Web: [Tu Sitio Web]\n"
+    )
+    
+    # Mostrar el texto de los créditos en un widget Label en la ventana de créditos
+    label_texto = tk.Label(ventana_creditos, text=texto_creditos, font=("Arial", 12))
+    label_texto.pack(pady=10)
+    
+    # Botón para cerrar la ventana de créditos
+    boton_cerrar = tk.Button(ventana_creditos, text="Cerrar", command=ventana_creditos.destroy)
+    boton_cerrar.pack(pady=10)
+    
+    # Configurar la imagen para que persista (evitar que sea eliminada por el recolector de basura)
+    label_imagen.image = foto_creditos
+
+    # Centrar la ventana de créditos en la pantalla principal
+    ventana_creditos.update_idletasks()  # Actualizar la ventana antes de calcular la posición
+    
+    # Obtener el tamaño de la ventana de créditos y de la pantalla principal
+    ventana_ancho = ventana_creditos.winfo_width()
+    ventana_alto = ventana_creditos.winfo_height()
+    pantalla_ancho = ventana_creditos.winfo_screenwidth()
+    pantalla_alto = ventana_creditos.winfo_screenheight()
+    
+    # Calcular la posición centrada
+    posicion_x = (pantalla_ancho - ventana_ancho) // 2
+    posicion_y = (pantalla_alto - ventana_alto) // 2
+    
+    # Establecer la geometría de la ventana centrada
+    ventana_creditos.geometry(f"+{posicion_x}+{posicion_y}")
+
+    # Hacer que la ventana de créditos sea modal (bloquear la ventana principal mientras está abierta)
+    ventana_creditos.transient(root)
+    ventana_creditos.grab_set()
+    root.wait_window(ventana_creditos)
+def mostrar_instrucciones():
+    # Contenido del instructivo paso a paso
+    instrucciones = [
+        "Instrucciones de Uso:",
+        "",
+        "1. Introduzca los valores requeridos en los campos correspondientes.",
+        "2. Haga clic en el botón 'Calcular k' para calcular el valor de k.",
+        "3. Una vez calculado k, complete los campos restantes.",
+        "4. Haga clic en el botón 'Calcular Calor Específico (c)' para obtener el resultado.",
+        "",
+        "Nota: Asegúrese de ingresar valores numéricos válidos en todos los campos.",
+        "      Algunos campos se deshabilitarán después de su uso para evitar errores."
+    ]
+
+    # Mostrar las instrucciones como un mensaje informativo
+    messagebox.showinfo("Instrucciones de Uso", "\n".join(instrucciones))
 
 # Función para cargar datos de materiales desde un archivo JSON
 def cargar_datos_materiales(ruta_archivo):
@@ -88,10 +160,22 @@ screen_height = root.winfo_screenheight()
 
 # Establecer el ancho de la ventana igual al ancho de la pantalla
 root.geometry(f"{screen_width}x{screen_height}")  # Ajusta la altura según lo necesites
+# Crear la barra de menú
+menubar = tk.Menu(root)
 
+# Crear el menú 'Ayuda' en la barra de menú
+menu_ayuda = tk.Menu(menubar, tearoff=0)
+menu_ayuda.add_command(label="Créditos", command=mostrar_creditos)
+menu_ayuda.add_command(label="Instrucciones de Uso", command=mostrar_instrucciones)
+
+# Agregar el menú 'Ayuda' a la barra de menú
+menubar.add_cascade(label="Ayuda", menu=menu_ayuda)
+
+# Configurar la barra de menú en la ventana principal
+root.config(menu=menubar)
 
  # Cargar la imagen desde un archivo
-image_path = "calor.gif"
+image_path = "vacio2.jpg"
 image = Image.open(image_path)  # Abrir la imagen usando PIL
 photo = ImageTk.PhotoImage(image)  # Convertir la imagen a PhotoImage
 
@@ -99,7 +183,7 @@ photo = ImageTk.PhotoImage(image)  # Convertir la imagen a PhotoImage
 label = tk.Label(root, image=photo)
 label.grid(row=0, column=5, padx=10, pady=10,columnspan=3)  
 
-image_path2 = "calor2.gif"
+image_path2 = "vacio1.jpg"
 image2 = Image.open(image_path2)  # Abrir la imagen usando PIL
 photo2 = ImageTk.PhotoImage(image2)  # Convertir la imagen a PhotoImage
 
@@ -147,7 +231,7 @@ btn_agregar_mh20k.grid(row=5, column=3, columnspan=1, padx=10, pady=10)
 # Botón para calcular k
 
 btn_calcular_k = tk.Button(root, text="Calcular k", command=calcular_k)
-btn_calcular_k.grid(row=7, column=1, columnspan=2, padx=10, pady=10)
+btn_calcular_k.grid(row=6, column=1, columnspan=2, padx=10, pady=10)
 
 
 #separator
@@ -194,5 +278,6 @@ btn_agregar_mh20k.grid(row=5, column=7, columnspan=1, padx=10, pady=10)
 # Botón para calcular el calor específico del sólido (c)
 btn_calcular_c = tk.Button(root, text="Calcular Calor Específico (c)", command=calcular_calor_especifico)
 btn_calcular_c.grid(row=6, column=5, columnspan=2, padx=10, pady=10)
+
 
 root.mainloop()
