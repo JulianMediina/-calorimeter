@@ -9,6 +9,61 @@ import webbrowser
 
 image_path2 = "img/2.0.jpg"
 image_path1 = "img/1.0.jpg"
+
+def reiniciarApp():
+    # Restablecer las imágenes y etiquetas a las originales
+    modificar_ruta1("img/1.0.jpg")
+    modificar_ruta2("img/2.0.jpg")
+
+    # Restablecer los valores de las escalas a sus valores iniciales
+    entry_mh20k.set(50)
+    entry_MT0k.set(50)
+    entry_mTh20k.set(80)
+    entry_MT0h20k.set(10)
+    entry_Teh20K.set(entry_MT0h20k.get() + 1)
+    entry_msc.set(50)
+    entry_Mc.set(50)
+    entry_Tc.set(80)
+    entry_T0c.set(10)
+    entry_Teh20c.set(10)
+
+    # Habilitar todos los campos de entrada y botones
+    activateState('normal')
+
+    # Eliminar el texto de resultado de k
+    for widget in root.grid_slaves():
+        if isinstance(widget, tk.Label) and widget.grid_info()['row'] == 7:
+            widget.grid_forget()
+
+    # Reconfigurar el estado de los botones de agregar
+    btn_agregar_T0c.configure(state='normal')
+    btn_agregar_MT0k.configure(state='normal')
+    btn_agregar_mTh20k.configure(state='normal')
+    btn_agregar_MT0h20k.configure(state='normal')
+    btn_agregar_Teh20K.configure(state='normal')
+    btn_agregar_msc.configure(state='disabled')
+    btn_agregar_Mc.configure(state='disabled')
+    btn_agregar_Tc.configure(state='disabled')
+    btn_agregar_T0c.configure(state='disabled')
+    btn_agregar_Teh20c.configure(state='disabled')
+
+    # Eliminar cualquier texto de resultado de c
+    for widget in root.grid_slaves():
+        if isinstance(widget, tk.Label) and widget.grid_info()['row'] == 8:
+            widget.grid_forget()
+
+    # Restablecer los estados de los campos de entrada a 'normal'
+    entry_mh20k.configure(state='normal')
+    entry_MT0k.configure(state='normal')
+    entry_mTh20k.configure(state='normal')
+    entry_MT0h20k.configure(state='normal')
+    entry_Teh20K.configure(state='normal')
+    entry_msc.configure(state='disabled')
+    entry_Mc.configure(state='disabled')
+    entry_Tc.configure(state='disabled')
+    entry_T0c.configure(state='disabled')
+    entry_Teh20c.configure(state='disabled')
+
 def abrir_pagina_web():
     url = "http://www.sc.ehu.es/sbweb/fisica3/calor/calorimetro/calorimetro.html"
     webbrowser.open_new(url)
@@ -90,20 +145,35 @@ def mostrar_creditos():
     root.wait_window(ventana_creditos)
 def mostrar_instrucciones():
     # Contenido del instructivo paso a paso
-    instrucciones = [
-        "Instrucciones de Uso:",
-        "",
-        "1. Introduzca los valores requeridos en los campos correspondientes.",
-        "2. Haga clic en el botón 'Calcular k' para calcular el valor de k.",
-        "3. Una vez calculado k, complete los campos restantes.",
-        "4. Haga clic en el botón 'Calcular Calor Específico (c)' para obtener el resultado.",
-        "",
-        "Nota: Asegúrese de ingresar valores numéricos válidos en todos los campos.",
-        "      Algunos campos se deshabilitarán después de su uso para evitar errores."
-    ]
+    instrucciones = """
+    Manual de Uso del Código
+    
+    Requisitos Previos:
+    - Asegúrate de tener Python instalado en tu sistema.
+    - Instala las bibliotecas necesarias usando pip:
+      - tkinter
+      - pillow (PIL)
+      - json
+
+    Interfaz Gráfica:
+    - La aplicación tiene dos partes principales:
+      1. Determinación del Equivalente en Agua del Calorímetro.
+      2. Determinación del Calor Específico del Sólido.
+
+    Funcionalidades Adicionales:
+    - Menú de Ayuda para acceder a instrucciones detalladas, créditos y más.
+    - Créditos y ventana emergente de instrucciones disponibles.
+
+    Instrucciones de Uso:
+    1. Ingresa valores en los campos correspondientes.
+    2. Utiliza los botones "Agregar" para actualizar y deshabilitar campos.
+    3. Calcula resultados usando los botones respectivos.
+
+    Disfruta utilizando la aplicación!
+    """
 
     # Mostrar las instrucciones como un mensaje informativo
-    messagebox.showinfo("Instrucciones de Uso", "\n".join(instrucciones))
+    messagebox.showinfo("Instrucciones de Uso", instrucciones)
 
 # Función para cargar datos de materiales desde un archivo JSON
 def cargar_datos_materiales(ruta_archivo):
@@ -349,6 +419,9 @@ btn_agregar_Teh20c.configure(state='disabled')
 # Botón para calcular el calor específico del sólido (c)
 btn_calcular_c = tk.Button(root, text="Calcular Calor Específico (c)", command=calcular_calor_especifico)
 btn_calcular_c.grid(row=7, column=5, columnspan=2, padx=10, pady=10)
+# Botón para reinicia app
+btn_reset = tk.Button(root, text="REINICIAR", command=reiniciarApp,background='red')
+btn_reset.grid(row=7, column=6, columnspan=2, padx=10, pady=10)
 
 
 root.mainloop()
