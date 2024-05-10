@@ -7,8 +7,8 @@ from tkinter import messagebox
 import webbrowser
 
 
-image_path2 = "2.0.jpg"
-image_path1 = "1.0.jpg"
+image_path2 = "img/2.0.jpg"
+image_path1 = "img/1.0.jpg"
 def modificar_ruta1(path):
     global image_path1
     global label
@@ -36,7 +36,7 @@ def mostrar_creditos():
     ventana_creditos.title("Créditos")
     
     # Cargar la imagen de los créditos desde un archivo
-    imagen_creditos = Image.open("LogoUPTC.png")
+    imagen_creditos = Image.open("img/LogoUPTC.png")
     imagen_creditos = imagen_creditos.resize((800, 300))  # Ajustar el tamaño de la imagen si es necesario
     foto_creditos = ImageTk.PhotoImage(imagen_creditos)
     foto_creditos.padding = 100
@@ -170,35 +170,35 @@ def calcular_calor_especifico():
 def agregar(case):
     if case == 1:
         entry_mh20k.configure(state='disabled')
-        modificar_ruta1('1.1.png')
-        modificar_ruta2('2.0.jpg') 
+        modificar_ruta1('img/1.1.png')
+        modificar_ruta2('img/2.0.jpg') 
     elif case == 2:
         entry_MT0k.configure(state='disabled')
-        modificar_ruta1("1.3.jpg") 
+        modificar_ruta1("img/1.3.jpg") 
     elif case == 3:
         entry_mTh20k.configure(state='disabled')
-        modificar_ruta1("1.4.jpg") 
+        modificar_ruta1("img/1.4.jpg") 
     elif case == 4:
         entry_MT0h20k.configure(state='disabled')
-        modificar_ruta1("1.5.jpg") 
+        modificar_ruta1("img/1.5.jpg") 
     elif case == 5:
         entry_Teh20K.configure(state='disabled')
-        modificar_ruta1("1.6.jpg")
+        modificar_ruta1("img/1.6.jpg")
     elif case == 6:
         entry_msc.configure(state='disabled')
-        modificar_ruta2("2.1.jpg")
+        modificar_ruta2("img/2.1.jpg")
     elif case == 7:
         entry_Mc.configure(state='disabled')
-        modificar_ruta2("2.2.jpg")
+        modificar_ruta2("img/2.2.jpg")
     elif case == 8:
         entry_Tc.configure(state='disabled')
-        modificar_ruta2("2.4.jpg")
+        modificar_ruta2("img/2.4.jpg")
     elif case == 9:
         entry_T0c.configure(state='disabled')
-        modificar_ruta2("2.5.jpg")
+        modificar_ruta2("img/2.5.jpg")
     elif case == 10:
         entry_Teh20c.configure(state='disabled')
-        modificar_ruta2("2.6.jpg")
+        modificar_ruta2("img/2.6.jpg")
     
 # Crear la ventana principal
 root = tk.Tk()
