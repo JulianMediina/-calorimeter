@@ -391,7 +391,7 @@ btn_agregar_Tc.grid(row=4, column=7, columnspan=1, padx=10, pady=10)
 btn_agregar_Tc.configure(state='disabled')
 
 tk.Label(root, text="T0 (temperatura inicial del fluido):",font=("Arial",10),background='white').grid(row=5, column=5, padx=10, pady=10, sticky=tk.E)
-entry_T0c = tk.Scale(root, from_=10, to=30, orient=tk.HORIZONTAL, length=300,sliderlength=20, tickinterval=5, 
+entry_T0c = tk.Scale(root, from_=10, to=23, orient=tk.HORIZONTAL, length=300,sliderlength=20, tickinterval=1, 
                        bg="lightblue", highlightthickness=0,troughcolor="white")
 entry_T0c.grid(row=5, column=6, padx=10, pady=10)
 entry_T0c.configure(state='disabled')
@@ -400,7 +400,7 @@ btn_agregar_T0c.grid(row=5, column=7, columnspan=1, padx=10, pady=10)
 btn_agregar_T0c.configure(state='disabled')
 
 tk.Label(root, text="Te (temperatura de equilibrio del fluido):",font=("Arial",10),background='white').grid(row=6, column=5, padx=10, pady=10, sticky=tk.E)
-entry_Teh20c = tk.Scale(root, from_=10, to=50, orient=tk.HORIZONTAL, length=300,sliderlength=20, tickinterval=5, 
+entry_Teh20c = tk.Scale(root, from_=20, to=30, orient=tk.HORIZONTAL, length=300,sliderlength=20, tickinterval=1, 
                        bg="lightblue", highlightthickness=0,troughcolor="white")
 entry_Teh20c.grid(row=6, column=6, padx=10, pady=10)
 entry_Teh20c.configure(state='disabled')
