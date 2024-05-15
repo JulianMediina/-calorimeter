@@ -20,12 +20,12 @@ def reiniciarApp():
     entry_MT0k.set(50)
     entry_mTh20k.set(80)
     entry_MT0h20k.set(10)
-    entry_Teh20K.set(entry_MT0h20k.get() + 1)
+    entry_Teh20K.set(20)
     entry_msc.set(50)
     entry_Mc.set(50)
     entry_Tc.set(80)
     entry_T0c.set(10)
-    entry_Teh20c.set(10)
+    entry_Teh20c.set(20)
 
     # Habilitar todos los campos de entrada y botones
     activateState('normal')
@@ -36,11 +36,6 @@ def reiniciarApp():
             widget.grid_forget()
 
     # Reconfigurar el estado de los botones de agregar
-    btn_agregar_T0c.configure(state='normal')
-    btn_agregar_MT0k.configure(state='normal')
-    btn_agregar_mTh20k.configure(state='normal')
-    btn_agregar_MT0h20k.configure(state='normal')
-    btn_agregar_Teh20K.configure(state='normal')
     btn_agregar_msc.configure(state='disabled')
     btn_agregar_Mc.configure(state='disabled')
     btn_agregar_Tc.configure(state='disabled')
@@ -53,11 +48,7 @@ def reiniciarApp():
             widget.grid_forget()
 
     # Restablecer los estados de los campos de entrada a 'normal'
-    entry_mh20k.configure(state='normal')
-    entry_MT0k.configure(state='normal')
-    entry_mTh20k.configure(state='normal')
-    entry_MT0h20k.configure(state='normal')
-    entry_Teh20K.configure(state='normal')
+
     entry_msc.configure(state='disabled')
     entry_Mc.configure(state='disabled')
     entry_Tc.configure(state='disabled')
