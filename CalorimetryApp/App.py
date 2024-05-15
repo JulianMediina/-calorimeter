@@ -240,37 +240,29 @@ def calcular_calor_especifico():
 
     except ValueError:
         messagebox.showerror("Error", "Por favor, ingrese valores numéricos válidos.")
+#ANIMACION AL AGREGAR
 def agregar(case):
-    if case == 1:
-        entry_mh20k.configure(state='disabled')
+    if case == 1:      
         modificar_ruta1('img/1.1.png')
         modificar_ruta2('img/2.0.jpg') 
     elif case == 2:
-        entry_MT0k.configure(state='disabled')
         modificar_ruta1("img/1.3.jpg") 
     elif case == 3:
-        entry_mTh20k.configure(state='disabled')
         modificar_ruta1("img/1.4.jpg") 
     elif case == 4:
-        entry_MT0h20k.configure(state='disabled')
         modificar_ruta1("img/1.5.jpg") 
     elif case == 5:
-        entry_Teh20K.configure(state='disabled')
         modificar_ruta1("img/1.6.jpg")
     elif case == 6:
-        entry_msc.configure(state='disabled')
         modificar_ruta2("img/2.1.jpg")
     elif case == 7:
-        entry_Mc.configure(state='disabled')
         modificar_ruta2("img/2.2.jpg")
     elif case == 8:
         entry_Tc.configure(state='disabled')
         modificar_ruta2("img/2.4.jpg")
     elif case == 9:
-        entry_T0c.configure(state='disabled')
         modificar_ruta2("img/2.5.jpg")
     elif case == 10:
-        entry_Teh20c.configure(state='disabled')
         modificar_ruta2("img/2.6.jpg")
     
 # Crear la ventana principal
@@ -342,14 +334,14 @@ btn_agregar_mTh20k= tk.Button(root, text="Agregar", command=lambda c=3: agregar(
 btn_agregar_mTh20k.grid(row=4, column=3, columnspan=1, padx=10, pady=10)
 
 tk.Label(root, text="T0 ( T0 del agua en el calorimetro):",font=("Arial",10),background='white').grid(row=5, column=0, padx=10, pady=10, sticky=tk.E)
-entry_MT0h20k = tk.Scale(root, from_=10, to=30, orient=tk.HORIZONTAL, length=300,sliderlength=20,  tickinterval=5, 
+entry_MT0h20k = tk.Scale(root, from_=10, to=23, orient=tk.HORIZONTAL, length=300,sliderlength=20,  tickinterval=1, 
                        bg="lightblue", highlightthickness=0,troughcolor="white")
 entry_MT0h20k.grid(row=5, column=2, padx=10, pady=10)
 btn_agregar_MT0h20k= tk.Button(root, text="Agregar", command=lambda c=4: agregar(c))
 btn_agregar_MT0h20k.grid(row=5, column=3, columnspan=1, padx=10, pady=10)
 
 tk.Label(root, text="Te (temperatura de equilibrio \n del agua en el calorimetro):",font=("Arial",10),background='white').grid(row=6, column=0, padx=10, pady=10, sticky=tk.E)
-entry_Teh20K = tk.Scale(root, from_=entry_MT0h20k.get()+1, to=50, orient=tk.HORIZONTAL, length=300,sliderlength=20, tickinterval=5, 
+entry_Teh20K = tk.Scale(root, from_=20, to=30, orient=tk.HORIZONTAL, length=300,sliderlength=20, tickinterval=1, 
                        bg="lightblue", highlightthickness=0,troughcolor="white")
 entry_Teh20K.grid(row=6, column=2, padx=10, pady=10)
 btn_agregar_Teh20K= tk.Button(root, text="Agregar", command=lambda c=5: agregar(c))
