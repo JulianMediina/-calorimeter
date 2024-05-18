@@ -1,391 +1,386 @@
 {
     "Aluminio": {
         "calor_especifico": 897,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Hierro": {
         "calor_especifico": 449,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Cobre": {
         "calor_especifico": 385,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Plata": {
         "calor_especifico": 235,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Oro": {
         "calor_especifico": 129,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Acero inoxidable": {
         "calor_especifico": 500,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Bronce": {
         "calor_especifico": 380,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Estaño": {
         "calor_especifico": 230,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Plomo": {
         "calor_especifico": 128,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Níquel": {
         "calor_especifico": 444,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Titanio": {
         "calor_especifico": 520,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Mercurio": {
         "calor_especifico": 139,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Uranio": {
         "calor_especifico": 116,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Plástico (polietileno)": {
         "calor_especifico": 2100,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Vidrio (cristal común)": {
         "calor_especifico": 837,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Hielo (agua congelada)": {
         "calor_especifico": 2100,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
-     
     "Hormigón": {
         "calor_especifico": 880,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Madera (roble)": {
         "calor_especifico": 1700,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Poliestireno expandido (espuma de poliestireno)": {
         "calor_especifico": 1400,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Fibra de carbono": {
         "calor_especifico": 710,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Fibra de vidrio": {
         "calor_especifico": 840,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Nitrogeno": {
         "calor_especifico": 1040,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
-
     "Polipropileno": {
         "calor_especifico": 1800,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Polimetilmetacrilato (acrílico)": {
         "calor_especifico": 1470,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Nailon": {
         "calor_especifico": 1460,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Niquel": {
         "calor_especifico": 1500,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Polietileno de baja densidad (PEBD)": {
         "calor_especifico": 2100,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Polietileno de alta densidad (PEAD)": {
         "calor_especifico": 2100,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Poliestireno": {
         "calor_especifico": 1300,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Baquelita": {
         "calor_especifico": 1100,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Resina epoxi": {
         "calor_especifico": 1400,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Gel de sílice": {
         "calor_especifico": 1800,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Silicona": {
         "calor_especifico": 1400,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Poliuretano": {
         "calor_especifico": 1300,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Caucho natural": {
         "calor_especifico": 1600,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Caucho sintético (neopreno)": {
         "calor_especifico": 1400,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Vidrio (cristal óptico)": {
         "calor_especifico": 840,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Cerámica (porcelana)": {
         "calor_especifico": 800,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Lana de vidrio": {
         "calor_especifico": 840,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Lana de roca": {
         "calor_especifico": 800,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Cobre (alambre)": {
         "calor_especifico": 385,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Aluminio (alambre)": {
         "calor_especifico": 897,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Plomo (plancha)": {
         "calor_especifico": 128,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Plata (plancha)": {
         "calor_especifico": 235,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Oro (plancha)": {
         "calor_especifico": 129,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Acero (aleación)": {
         "calor_especifico": 470,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Acero (inoxidable)": {
         "calor_especifico": 500,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Acero (hierro colado)": {
         "calor_especifico": 460,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Acero (hierro forjado)": {
         "calor_especifico": 450,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Acero (hierro dulce)": {
         "calor_especifico": 460,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
-  
     "Magnesio": {
         "calor_especifico": 1020,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Zinc": {
         "calor_especifico": 700,
-        "unidad": "J/(kg·K)"
-    },  
-
+        "unidad": "J/(kg·°C)"
+    },
     "Calcio": {
         "calor_especifico": 630,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Litio": {
         "calor_especifico": 3570,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Sodio": {
         "calor_especifico": 1230,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Potasio": {
         "calor_especifico": 750,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Rubidio": {
         "calor_especifico": 363,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Cadmio": {
         "calor_especifico": 320,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Cesio": {
         "calor_especifico": 240,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Estroncio": {
         "calor_especifico": 300,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Berilio": {
         "calor_especifico": 1920,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Boro": {
         "calor_especifico": 1100,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Carbono (grafito)": {
         "calor_especifico": 710,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Silicio": {
         "calor_especifico": 710,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Germanio": {
         "calor_especifico": 320,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Arsénico": {
         "calor_especifico": 330,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Selenio": {
         "calor_especifico": 320,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Telurio": {
         "calor_especifico": 202,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Azufre": {
         "calor_especifico": 710,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Oxígeno (O2)": {
         "calor_especifico": 919,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
-
     "Hielo seco (CO2 sólido)": {
         "calor_especifico": 2160,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Óxido de aluminio (alúmina)": {
         "calor_especifico": 765,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Óxido de hierro (óxido férrico)": {
         "calor_especifico": 460,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Óxido de cobre (I) (óxido cuproso)": {
         "calor_especifico": 400,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Óxido de cobre (II) (óxido cúprico)": {
         "calor_especifico": 396,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Óxido de plata (I) (óxido argéntico)": {
         "calor_especifico": 250,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Óxido de plata (II) (óxido argéntico)": {
         "calor_especifico": 255,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Óxido de zinc": {
         "calor_especifico": 390,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Óxido de titanio (IV) (dióxido de titanio)": {
         "calor_especifico": 520,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Cloruro de sodio (sal común)": {
         "calor_especifico": 856,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Cloruro de calcio": {
         "calor_especifico": 835,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Cloruro de potasio": {
         "calor_especifico": 750,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Cloruro de magnesio": {
         "calor_especifico": 1080,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Cloruro de zinc": {
         "calor_especifico": 720,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Cloruro de cobre (I) (cloruro cuproso)": {
         "calor_especifico": 210,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Cloruro de cobre (II) (cloruro cúprico)": {
         "calor_especifico": 210,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Cloruro de estaño (II) (cloruro estannoso)": {
         "calor_especifico": 238,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Cloruro de estaño (IV) (cloruro estannico)": {
         "calor_especifico": 227,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Sulfato de aluminio": {
         "calor_especifico": 880,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Sulfato de cobre (II)": {
         "calor_especifico": 385,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Sulfato de zinc": {
         "calor_especifico": 390,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Sulfato de hierro (II)": {
         "calor_especifico": 450,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Sulfato de hierro (III)": {
         "calor_especifico": 420,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Sulfato de cobalto (II)": {
         "calor_especifico": 390,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Nitrato de potasio": {
         "calor_especifico": 770,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     },
     "Nitrato de sodio": {
         "calor_especifico": 1120,
-        "unidad": "J/(kg·K)"
+        "unidad": "J/(kg·°C)"
     }
 }
